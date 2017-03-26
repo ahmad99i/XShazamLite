@@ -57,7 +57,5 @@ public class Module implements IXposedHookLoadPackage {
                 param.setResult(String.valueOf("404"));
             }
         });
-
-
     }
 }
