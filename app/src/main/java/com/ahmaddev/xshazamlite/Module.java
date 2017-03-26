@@ -16,7 +16,7 @@ public class Module implements IXposedHookLoadPackage {
 
         XposedBridge.log("Loaded app: " + lpparam.packageName);
 
-        findAndHookMethod("com.shazam.android.lite.d.b", lpparam.classLoader, "i", new XC_MethodHook() {
+        findAndHookMethod("com.shazam.android.lite.d.b", lpparam.classLoader, "h", new XC_MethodHook() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 // this will be called before the clock was updated by the original method
@@ -44,7 +44,7 @@ public class Module implements IXposedHookLoadPackage {
             }
         });
 
-        findAndHookMethod("com.shazam.android.lite.d.b", lpparam.classLoader, "h", new XC_MethodHook() {
+        findAndHookMethod("com.shazam.android.lite.d.b", lpparam.classLoader, "g", new XC_MethodHook() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 // this will be called before the clock was updated by the original method
